@@ -14,9 +14,27 @@ public class FishController : MonoBehaviour
 
     private void Update()
     {
-       rb.
+       if (Input.GetKey(KeyCode.UpArrow))
+        {
+            MovementUp();
+        }
+       else if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            MovementDown();
+
+        }
+    }
+    private void MovementUp()
+    {
+        rb.velocity = new Vector2(0, swimForce);       
+        
     }
 
+    private void MovementDown()
+    {
+        rb.velocity = new Vector2(0, -swimForce);
+       
+    }
     private void FixedUpdate()
     {
         
