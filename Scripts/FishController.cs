@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FishController : MonoBehaviour
 {
@@ -6,8 +8,8 @@ public class FishController : MonoBehaviour
 
     private Rigidbody2D rb;
    
-    public float acceleration = 0.3f; // ускорение
-    public float maxSwimForce = 6.5f; // максимальная скорость
+    private float acceleration = 0.3f; // ускорение
+    private float maxSwimForce = 6.5f; // максимальная скорость
 
     private void Start()
     {
@@ -20,29 +22,32 @@ public class FishController : MonoBehaviour
         Movement(swimForce);
 
         //  ниже изменение ускорения
-        if (Input.GetKey(KeyCode.Space))
-        {
-            
-           
+        if (Input.GetKey(KeyCode.UpArrow))
+        {        
             if(swimForce < maxSwimForce) 
-                swimForce += acceleration;  
+                swimForce += acceleration; 
         }
-        else
+        else 
         {
-
-
             if (swimForce > -maxSwimForce)
-                swimForce -= acceleration;
-
+                swimForce -= acceleration;            
         }
     }
+
     private void Movement(float swimForce)
-    {
-        
-        rb.velocity = new Vector2(0, swimForce);
-        
+    {        
+        rb.velocity = new Vector2(0, swimForce);        
     }
 
-    
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(0);
+        }
+
+    }
+
+
+
 }
