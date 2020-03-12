@@ -18,7 +18,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             time = Random.Range(1f, 5f);
             yield return new WaitForSeconds(time);
-            Instantiate(Enemy, new Vector3(11f, Random.Range(-4f, 4f), 0f), Quaternion.identity);
+            Instantiate(Enemy, new Vector2(11f, Random.Range(-4f, 4f)), Quaternion.identity);
         }    
     }   
 }
