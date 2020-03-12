@@ -45,15 +45,7 @@ public class FishController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-<<<<<<< HEAD
-
-            SceneManager.LoadScene(0);
-           
-        }
-
-=======
             SceneManager.LoadScene(0);           
         }
->>>>>>> master
     }
 }

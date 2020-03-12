@@ -12,10 +12,6 @@ GameObject:
   - component: {fileID: 1475630491066347194}
   - component: {fileID: 988136759567767718}
   - component: {fileID: 6990695131996526536}
-<<<<<<< HEAD
-  - component: {fileID: 3073016047199261028}
-=======
->>>>>>> master
   m_Layer: 0
   m_Name: FishEnemy2
   m_TagString: Enemy
@@ -125,30 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624b16f6dc6f93145bbacecfc290de76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  move: {x: -1, y: 0}
---- !u!50 &3073016047199261028
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475630491066347173}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.2
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
-=======
   speed: 0.15
   move: {x: -1, y: 0}
->>>>>>> master

@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
-<<<<<<< HEAD
-    private float speed;
- 
-    public Vector2 move;
-    void Start()
-    {
-        speed = Random.Range(0.09f, 0.3f);
-        
-    }
-
-=======
     public float speed; 
     public Vector2 move;
->>>>>>> master
     
     void FixedUpdate()
     {

@@ -531,17 +531,12 @@ Transform:
   m_LocalPosition: {x: -0.6368458, y: -0.5211076, z: -3.436428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-<<<<<<< HEAD
-=======
   - {fileID: 1359036798}
->>>>>>> master
   - {fileID: 2104660490}
   - {fileID: 1507046055}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!4 &1359036798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
@@ -623,7 +618,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13485a01da2b4704ba1befb2b560c70e, type: 3}
->>>>>>> master
 --- !u!1 &1381097104
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,20 +715,12 @@ PrefabInstance:
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
-      value: 10.521022
-=======
       value: 10.67
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< HEAD
-      value: 3.5434628
-=======
       value: 0.8
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
@@ -764,11 +750,7 @@ PrefabInstance:
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 0
-=======
       value: 1
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
@@ -1036,20 +1018,12 @@ PrefabInstance:
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
-      value: 10.61
-=======
       value: 10.72
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< HEAD
-      value: -2.0488923
-=======
       value: 0.21
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
@@ -1079,11 +1053,7 @@ PrefabInstance:
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 1
-=======
       value: 2
->>>>>>> master
       objectReference: {fileID: 0}
     - target: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
