@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 6521113706057619433}
   - component: {fileID: 6409239016284226027}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: ryba
+=======
+  m_Name: FishEnemy1
+>>>>>>> master
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,5 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624b16f6dc6f93145bbacecfc290de76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 0.03
+=======
+  speed: 0.15
+>>>>>>> master
   move: {x: -1, y: 0}

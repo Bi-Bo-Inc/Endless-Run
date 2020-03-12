@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
+<<<<<<< HEAD
     private float speed;
  
     public Vector2 move;
@@ -13,6 +14,10 @@ public class MoveEnemy : MonoBehaviour
         
     }
 
+=======
+    public float speed; 
+    public Vector2 move;
+>>>>>>> master
     
     void FixedUpdate()
     {
