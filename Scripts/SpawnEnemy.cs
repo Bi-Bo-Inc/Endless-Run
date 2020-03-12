@@ -35,12 +35,12 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
-            time = Random.Range(0.3f, 2f);
+            time = Random.Range(1f, 2f);
             yield return new WaitForSeconds(time);
             y = SetRandomLine();
             Instantiate(EnemyFishType1, new Vector2(11f, y), Quaternion.identity);
 
-            time = Random.Range(0.3f, 2f);
+            time = Random.Range(1f, 2f);
             yield return new WaitForSeconds(time);
             y = SetRandomLine();
             Instantiate(EnemyFishType2, new Vector2(11f, y), Quaternion.identity);
