@@ -2,33 +2,47 @@
 
 public class FishController : MonoBehaviour
 {
-    public float swimForce;
+    private float swimForce = 0;
 
     private Rigidbody2D rb;
-    
+   
+    public float acceleration = 0.3f; // ускорение
+    public float maxSwimForce = 6.5f; // максимальная скорость
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-       if (Input.GetKey(KeyCode.UpArrow))
+
+        Movement(swimForce);
+
+        //  ниже изменение ускорения
+        if (Input.GetKey(KeyCode.Space))
         {
-            MovementUp();
+            
+           
+            if(swimForce < maxSwimForce) 
+                swimForce += acceleration;  
         }
-       
+        else
+        {
+
+
+            if (swimForce > -maxSwimForce)
+                swimForce -= acceleration;
+
+        }
     }
-    private void MovementUp()
+    private void Movement(float swimForce)
     {
-        rb.velocity = new Vector2(0, swimForce);       
+        
+        rb.velocity = new Vector2(0, swimForce);
         
     }
 
     
-    private void FixedUpdate()
-    {
-        
-    }
+    
 }
