@@ -26,7 +26,7 @@ public class FishController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {        
             if(swimForce < maxSwimForce) 
-                swimForce += acceleration; 
+                swimForce += acceleration;            
         }
         else 
         {
