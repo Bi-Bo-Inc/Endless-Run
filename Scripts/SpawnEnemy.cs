@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public Transform SpawnPos;
+    //public Transform SpawnPos;
     public GameObject Enemy;
-    public float time;
+    private float time;
 
 
     void Start()
@@ -14,16 +14,14 @@ public class SpawnEnemy : MonoBehaviour
         StartCoroutine(SpawnerEnemy());
     }
 
-    void Repeat()
-    {
-        StartCoroutine(SpawnerEnemy());
-    }
-
+    
     IEnumerator SpawnerEnemy()
     {
-        yield return new WaitForSeconds(time);
-        Instantiate(Enemy, SpawnPos.position, Quaternion.identity);
-        Repeat();
+        while (true)
+        {
+            time = Random.Range(2f, 5f);
+            yield return new WaitForSeconds(time);
+            Instantiate(Enemy, new Vector3 (11f, Random.Range(-4f,4f),0f), Quaternion.identity);
+        }  
     }
-   
 }

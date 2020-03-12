@@ -6,16 +6,8 @@ public class MoveEnemy : MonoBehaviour
 {
     public float speed;
     public Vector2 move;
-
-
-
-    void Start()
-    {
-        
-    }
-
     
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(move * speed);
         if(gameObject.transform.position.x < -15)
