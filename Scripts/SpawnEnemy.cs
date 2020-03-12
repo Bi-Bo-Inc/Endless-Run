@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     public Transform SpawnPos;
     public GameObject Enemy;
-    public float time;
+    private float time;
 
 
     void Start()
@@ -21,9 +21,12 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator SpawnerEnemy()
     {
+        time = Random.Range(1f, 5f);
         yield return new WaitForSeconds(time);
         Instantiate(Enemy, SpawnPos.position, Quaternion.identity);
         Repeat();
     }
+
+   
    
 }

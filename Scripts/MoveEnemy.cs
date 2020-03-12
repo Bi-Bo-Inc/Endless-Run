@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
-    public float speed;
+    private float speed;
+ 
     public Vector2 move;
-
-
-
     void Start()
     {
+        speed = Random.Range(0.09f, 0.3f);
         
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(move * speed);
         if(gameObject.transform.position.x < -15)
