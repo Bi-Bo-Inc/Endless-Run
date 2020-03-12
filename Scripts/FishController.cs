@@ -5,17 +5,6 @@ public class FishController : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-<<<<<<< HEAD
-    private float acceleration = 0.3f; // ускорение
-    private float maxSwimForce = 6.5f; // максимальная скорость
-    private float fishRotation = 0;
-    public float maxFishRotation = 17f;
-    public float fishAcceleration = 1f;
-
-
-    private float secondsToStart = 1.5f;
-    private float startSpeed = 1.9f;
-=======
     private float swimForce = 0; //начальная скорость
     private float acceleration = 0.3f; //ускорение
     private float maxSwimForce = 6.5f; //максимальная скорость
@@ -26,7 +15,6 @@ public class FishController : MonoBehaviour
 
     private float secondsToStart = 1.5f;    //время до старта
     private float startSpeed = 1.9f;    //скорость выплывания рыбы
->>>>>>> master
 
     private void Start()
     {
@@ -35,37 +23,16 @@ public class FishController : MonoBehaviour
 
     private void FixedUpdate()
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         if(secondsToStart > 0)
         {
             secondsToStart -= Time.deltaTime;
             rb.velocity = new Vector2(startSpeed, 0);
-<<<<<<< HEAD
-            
-
-
-
-        }
-        else
-        {
-            
-            Game();
-        }
-       
-
-    }
-
-=======
         }
         else
         { 
             Game();
         }
     }
->>>>>>> master
     
     private void Game()
     {
@@ -80,13 +47,6 @@ public class FishController : MonoBehaviour
 
             if (fishRotation < maxFishRotation)            
                 fishRotation += fishAcceleration;
-<<<<<<< HEAD
-
-                // transform.rotation = Quaternion.Euler(0, 0, fishRotation);
-            }
-
-=======
->>>>>>> master
         }
         else
         {
@@ -95,12 +55,6 @@ public class FishController : MonoBehaviour
 
             if (fishRotation > -maxFishRotation)            
                 fishRotation -= fishAcceleration;
-<<<<<<< HEAD
-
-            }
-
-=======
->>>>>>> master
         }
     }
     
@@ -112,10 +66,6 @@ public class FishController : MonoBehaviour
     private void Movement(float swimForce)
     {        
         rb.velocity = new Vector2(0, swimForce);
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
     }
     
     private void OnCollisionEnter2D(Collision2D collision)

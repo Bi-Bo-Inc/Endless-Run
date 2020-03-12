@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7545326885110832223}
   - component: {fileID: 8621383431332621396}
   - component: {fileID: 6521113706057619433}
-  - component: {fileID: 5384597199367569070}
+  - component: {fileID: 6409239016284226027}
   m_Layer: 0
   m_Name: FishEnemy1
   m_TagString: Enemy
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8657711459713240022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.373, y: -1.505, z: 0}
-  m_LocalScale: {x: -0.83682513, y: 0.83682513, z: 0}
+  m_LocalPosition: {x: 1.9, y: -3.45, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.660284, y: 1.5801687}
   m_EdgeRadius: 0
---- !u!114 &5384597199367569070
+--- !u!114 &6409239016284226027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
