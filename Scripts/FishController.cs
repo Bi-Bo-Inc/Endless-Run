@@ -45,7 +45,6 @@ public class FishController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-
     }
 
 
