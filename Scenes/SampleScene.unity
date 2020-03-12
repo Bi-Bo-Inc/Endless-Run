@@ -984,7 +984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095887904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.14, y: -0.03, z: 0}
+  m_LocalPosition: {x: -7.54, y: -0.03, z: 0}
   m_LocalScale: {x: 0.21921666, y: 0.23937483, z: 0.8521739}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1002,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b75b6a30442bcd4ba7f0d7bb4c9a62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxFishRotation: 25
+  fishAcceleration: 1
 --- !u!4 &2104660490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
