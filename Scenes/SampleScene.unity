@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &126758862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5180033743717233473, guid: 13485a01da2b4704ba1befb2b560c70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1378426491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &128426655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6902197619114934823, guid: ec674fb42c2cf7147b4261227974996d,
@@ -234,8 +240,8 @@ Canvas:
   m_GameObject: {fileID: 362146202}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -541,7 +547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.95007, y: 216}
+  m_AnchoredPosition: {x: 869, y: 429}
   m_SizeDelta: {x: 53.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544106847
@@ -787,7 +793,7 @@ Transform:
   m_LocalPosition: {x: -0.6368458, y: -0.5211076, z: -3.436428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1359036798}
+  - {fileID: 126758862}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -805,7 +811,7 @@ GameObject:
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -825,7 +831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 331.1, y: 216}
+  m_AnchoredPosition: {x: 721, y: 433}
   m_SizeDelta: {x: 212.6, y: 67.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308473312
@@ -864,12 +870,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308473310}
   m_CullTransparentMesh: 0
---- !u!4 &1359036798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1748012574337474499, guid: 13485a01da2b4704ba1befb2b560c70e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1378426491}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1378426491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -954,6 +954,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpawnEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863179564902917737, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: minTimeSpawnEnemy
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863179564902917737, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: maxTimeSpawnEnemy
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262139263805221338, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5180033743717233473, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13485a01da2b4704ba1befb2b560c70e, type: 3}
