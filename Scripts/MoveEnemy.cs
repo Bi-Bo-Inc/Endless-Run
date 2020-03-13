@@ -7,8 +7,13 @@ public class MoveEnemy : MonoBehaviour
     
     void FixedUpdate()
     {
+        EnemyMoving();
+    }
+
+    void EnemyMoving()
+    {
         transform.Translate(move * speed);
-        if(gameObject.transform.position.x < -15)
+        if (gameObject.transform.position.x < -15)
         {
             Destroy(gameObject);
         }
