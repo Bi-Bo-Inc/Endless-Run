@@ -955,6 +955,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2863179564902917737, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: minTimeSpawnEnemy
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863179564902917737, guid: 13485a01da2b4704ba1befb2b560c70e,
+        type: 3}
+      propertyPath: maxTimeSpawnEnemy
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3262139263805221338, guid: 13485a01da2b4704ba1befb2b560c70e,
         type: 3}
       propertyPath: m_Icon
