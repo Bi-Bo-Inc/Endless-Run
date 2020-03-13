@@ -10,20 +10,37 @@ public class SpawnEnemy : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnerEnemy());
-    }    
+    }
 
     private float SetRandomLine()
     {
 
-        
-        int randLine = Random.Range(0,3); //какая-то херня с switch ,тут указан диапазон из 4 чисел потому,что он игнорирует последнее
-                                          //для трех кейсов нужно 4 значения ,ибо свитч берет диапазон [0;3)
+
+        int randLine = Random.Range(0, 3); //какая-то херня с switch ,тут указан диапазон из 4 чисел потому,что он игнорирует последнее
+                                           //для трех кейсов нужно 4 значения ,ибо свитч берет диапазон [0;3)
+        int randForCase2 = -1;
+
         if (y == 3.178791f)
-            randLine = 1;
+            randLine = Random.Range(1, 3);
+
         else if (y == -0.17f)
-            randLine = 2;
+        {
+            int tmpRand = Random.Range(0, 2);
+
+            if (tmpRand == 1)
+            {
+                randForCase2 = 2;
+            }
+            else if (tmpRand == 0)
+            {
+                randForCase2 = 0;
+            }
+            randLine = randForCase2;
+        }
+
         else if (y == -3.15f)
-            randLine = 0;
+            randLine = Random.Range(0, 2);
+
         switch (randLine)
         {
             case 0:
@@ -45,17 +62,26 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
-            //спавн для первого вида рыбы
-            time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
-            yield return new WaitForSeconds(time);
-            y = SetRandomLine();
-            Instantiate(EnemyFishType1, new Vector2(11f, y), Quaternion.identity);
-
-            //спавн для второго вида рыбы
-            time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
-            yield return new WaitForSeconds(time);
-            y = SetRandomLine();
-            Instantiate(EnemyFishType2, new Vector2(11f, y), Quaternion.identity);
-        }    
-    }   
+            int randFishEnemyChoose = Random.Range(1,3);
+            GameObject curFish;
+            if (randFishEnemyChoose == 1)
+            {
+                curFish = EnemyFishType1;
+                //спавн для первого вида рыбы
+                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
+                yield return new WaitForSeconds(time);
+                y = SetRandomLine();
+                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+            }
+            else if(randFishEnemyChoose == 2)
+            {
+                curFish = EnemyFishType2;
+                //спавн для первого вида рыбы
+                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
+                yield return new WaitForSeconds(time);
+                y = SetRandomLine();
+                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+            }
+        }
+    }
 }

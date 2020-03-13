@@ -22,6 +22,7 @@ public class ScoreScript : MonoBehaviour
 
     IEnumerator Score()
     {
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             yield return new WaitForSeconds(time);
