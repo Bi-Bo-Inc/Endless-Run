@@ -67,7 +67,7 @@ public class FishController : MonoBehaviour
     {        
         rb.velocity = new Vector2(0, swimForce);
     }
-    
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -76,4 +76,5 @@ public class FishController : MonoBehaviour
             ScoreScript.scoreValue = 0;
         }
     }
+    */
 }
