@@ -2,9 +2,9 @@
 
 public class MoveEnemy : MonoBehaviour
 {
-    public float speed; 
+    public float speed;
     public Vector2 move;
-    
+
     void FixedUpdate()
     {
         EnemyMoving();
@@ -18,4 +18,5 @@ public class MoveEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-}
+
+}   
