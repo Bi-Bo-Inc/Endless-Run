@@ -10,8 +10,8 @@ public class FishController : MonoBehaviour
     private float maxSwimForce = 6.5f; //максимальная скорость
 
     private float fishRotation = 0; //начальное положение
-    public float fishAcceleration = 1f; //поворот
-    public float maxFishRotation = 17f; //максимальный поворот
+    private float fishAcceleration = 1f; //поворот
+    private float maxFishRotation = 25f; //максимальный поворот
 
     private float secondsToStart = 1.5f;    //время до старта
     private float startSpeed = 1.9f;    //скорость выплывания рыбы
