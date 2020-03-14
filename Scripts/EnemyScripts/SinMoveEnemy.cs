@@ -12,13 +12,14 @@ public class SinMoveEnemy : MonoBehaviour
 	private float magnitude = 0.5f;
 	public float minRandAmplit;
 	public float maxRandAmplit;
+	private float randForMagn;
 
 	Vector3 pos;
 
 	void Start()
 	{
 		pos = transform.position;
-		minRandAmplit = Random.Range(0.1f, 0.4f);
+		randForMagn = Random.Range(minRandAmplit, maxRandAmplit);
 	}
 
 	void FixedUpdate()
@@ -31,6 +32,10 @@ public class SinMoveEnemy : MonoBehaviour
 	{
 		
 		pos -= transform.right * Time.deltaTime * moveSpeed;
-		transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency  * (magnitude+ minRandAmplit));
+		transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency  * (magnitude + randForMagn));
+		if (gameObject.transform.position.x < -15)
+		{
+			Destroy(gameObject);
+		}
 	}
 }
