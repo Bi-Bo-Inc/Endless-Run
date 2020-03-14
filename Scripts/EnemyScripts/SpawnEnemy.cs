@@ -4,42 +4,45 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject EnemyFishType1, EnemyFishType2, EnemyFishType3;
-    public float minTimeSpawnEnemy, maxTimeSpawnEnemy;
-    private float time;
+    private GameObject curFish; //переменная выбора рыбы для спавна
+
+    [SerializeField]
+    private float time; //asd
+
     private float y = 0; //переменная для выбора линии куда кинуть enemy
 
     void Start()
     {
         StartCoroutine(SpawnerEnemy());
     }
-
+    
     private float SetRandomLine()
     {
         int randLine = Random.Range(0, 3); //какая-то херня с switch ,тут указан диапазон из 4 чисел потому,что он игнорирует последнее
                                            //для трех кейсов нужно 4 значения ,ибо свитч берет диапазон [0;3)
         int randForCase2 = -1;
+        { //так надо,не трогать!
+            if (y == 3.178791f)
+                randLine = Random.Range(1, 3);
 
-        if (y == 3.178791f)
-            randLine = Random.Range(1, 3);
-
-        else if (y == -0.17f)
-        {
-            int tmpRand = Random.Range(0, 2);
-
-            if (tmpRand == 1)
+            else if (y == -0.17f) //не вникайте,потом подправлю,пока просто не трогайте
             {
-                randForCase2 = 2;
+                int tmpRand = Random.Range(0, 2);
+
+                if (tmpRand == 1)
+                {
+                    randForCase2 = 2;
+                }
+                else if (tmpRand == 0)
+                {
+                    randForCase2 = 0;
+                }
+                randLine = randForCase2;
             }
-            else if (tmpRand == 0)
-            {
-                randForCase2 = 0;
-            }
-            randLine = randForCase2;
+
+            else if (y == -3.15f)
+                randLine = Random.Range(0, 2);
         }
-
-        else if (y == -3.15f)
-            randLine = Random.Range(0, 2);
-
         switch (randLine)
         {
             case 0:
@@ -56,40 +59,45 @@ public class SpawnEnemy : MonoBehaviour
         }
         return y;
     }
-
+    private void TimeDecrease() //уменьшение времени после каждой заспавненной рыбы
+    {
+        if (time > 0.3f)
+            time -= 0.015f; //увеличение скорости спавна рыб,можно менять,но смотрите на ограничение IF,который выше 
+        else
+        {
+            time = 0.3f;
+        }
+    }
+   
+    private void ChooseRandFish() //выбор полупокера для спавна
+    {
+        y = SetRandomLine();
+        Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+    }
     IEnumerator SpawnerEnemy()
     {
         while (true)
         {
-            int randFishEnemyChoose = Random.Range(1,4);
-            GameObject curFish;
-
-            if (randFishEnemyChoose == 1)
+            TimeDecrease();
+            int randFishEnemyChoose = Random.Range(1,4); //выбор номера рыбы для спавна
+                                                         //номер решает какая рыба будет выбранна для спавна
+            if (randFishEnemyChoose == 1) //спавн для первого вида рыбы
             {
-                curFish = EnemyFishType1;
-                //спавн для первого вида рыбы
-                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
+                curFish = EnemyFishType1;          
                 yield return new WaitForSeconds(time);
-                y = SetRandomLine();
-                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+                ChooseRandFish();
             }
-            else if(randFishEnemyChoose == 2)
+            else if (randFishEnemyChoose == 2) //спавн для второго вида рыбы
             {
                 curFish = EnemyFishType2;
-                //спавн для второго вида рыбы
-                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
                 yield return new WaitForSeconds(time);
-                y = SetRandomLine();
-                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+                ChooseRandFish();
             }
-            else if (randFishEnemyChoose == 3)
+            else if (randFishEnemyChoose == 3) //спавн для третьего вида рыбы
             {
                 curFish = EnemyFishType3;
-                //спавн для второго вида рыбы
-                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
                 yield return new WaitForSeconds(time);
-                y = SetRandomLine();
-                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+                ChooseRandFish();
             }
         }
     }
