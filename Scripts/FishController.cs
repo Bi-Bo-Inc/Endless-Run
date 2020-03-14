@@ -30,7 +30,8 @@ public class FishController : MonoBehaviour
         }
         else
         { 
-            Game();
+            if (!FishDeath.IsDeath)
+                Game();
         }
     }
     

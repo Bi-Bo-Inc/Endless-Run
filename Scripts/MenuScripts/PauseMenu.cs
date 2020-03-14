@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
         ScoreScript.scoreValue = 0;
         FishDeath.IsDeath = false;
+        ScoreScript.scoreIncreasing = true;
     }
     /*
     public void LoadMenu()

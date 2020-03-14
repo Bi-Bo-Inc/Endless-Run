@@ -11,6 +11,8 @@ public class ScoreScript : MonoBehaviour
     public static int highScoreValue = 0; //значение наивысшего рекорда
 
     private float pointsPerSecond = 1; //скорость обновления рекорда 
+    public static bool scoreIncreasing = true;
+    
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class ScoreScript : MonoBehaviour
     IEnumerator Score()
     {
         yield return new WaitForSeconds(2f);
-        while (true)
+        while (scoreIncreasing)
         {
             yield return new WaitForSeconds(pointsPerSecond);
             scoreValue += 1;

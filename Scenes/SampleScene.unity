@@ -1765,7 +1765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44, y: -127.83}
+  m_AnchoredPosition: {x: -31.600006, y: -115.899994}
   m_SizeDelta: {x: 51.8, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445388999
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 1669600334}
   - component: {fileID: 1669600333}
   m_Layer: 0
-  m_Name: SpawnEnemy
+  m_Name: spawnEnemy
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2441,6 +2441,7 @@ MonoBehaviour:
   reloadButtonUI: {fileID: 4021694}
   highScoreUI: {fileID: 1110503818}
   highScoreValueUI: {fileID: 1445388997}
+  spawnEnemy: {fileID: 1669600332}
 --- !u!1 &2114315836
 GameObject:
   m_ObjectHideFlags: 0
