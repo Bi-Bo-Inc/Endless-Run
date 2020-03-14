@@ -1451,10 +1451,10 @@ RectTransform:
   m_Father: {fileID: 362146206}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 356.99994, y: 186.66998}
-  m_SizeDelta: {x: 236, y: 70.058}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -230, y: -126.33002}
+  m_SizeDelta: {x: 236, y: 70.05798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110503820
 MonoBehaviour:
@@ -1765,7 +1765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -31.600006, y: -115.899994}
+  m_AnchoredPosition: {x: -62, y: -126.33002}
   m_SizeDelta: {x: 51.8, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445388999
@@ -2250,6 +2250,7 @@ GameObject:
   - component: {fileID: 2095887906}
   - component: {fileID: 2095887909}
   - component: {fileID: 2095887910}
+  - component: {fileID: 2095887911}
   m_Layer: 0
   m_Name: PlayerFish
   m_TagString: Player
@@ -2295,7 +2296,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 1.06}
+    oldSize: {x: 2.31, y: 1.06}
     newSize: {x: 10.67, y: 4.81}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2442,6 +2443,26 @@ MonoBehaviour:
   highScoreUI: {fileID: 1110503818}
   highScoreValueUI: {fileID: 1445388997}
   spawnEnemy: {fileID: 1669600332}
+  ScoreManager: {fileID: 0}
+--- !u!95 &2095887911
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095887904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 276215081d0a21349b7a6ba5986ed23b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2114315836
 GameObject:
   m_ObjectHideFlags: 0
