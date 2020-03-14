@@ -67,14 +67,4 @@ public class FishController : MonoBehaviour
     {        
         rb.velocity = new Vector2(0, swimForce);
     }
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            SceneManager.LoadScene(0);
-            ScoreScript.scoreValue = 0;
-        }
-    }
-    */
 }
