@@ -10,6 +10,15 @@ public class SpawnEnemy : MonoBehaviour
     private float time; //asd
 
     private float y = 0; //переменная для выбора линии куда кинуть enemy
+ 
+    private bool isSpawnerOn = true;
+
+    public void IsSpawner(bool a)
+    {
+        isSpawnerOn = a;
+    }
+        
+
 
     void Start()
     {
@@ -76,7 +85,7 @@ public class SpawnEnemy : MonoBehaviour
     }
     IEnumerator SpawnerEnemy()
     {
-        while (true)
+        while (isSpawnerOn)
         {
             TimeDecrease();
             int randFishEnemyChoose = Random.Range(1,4); //выбор номера рыбы для спавна

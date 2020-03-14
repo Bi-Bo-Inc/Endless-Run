@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1475630491066347173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.248, y: -1.639, z: 0}
-  m_LocalScale: {x: 0.44974288, y: 0.44974288, z: 0}
+  m_LocalScale: {x: 0.38664585, y: 0.38664585, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,9 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   frequency: 5
-  magnitude: 0.5
-  minRandAmplit: 0.75
-  maxRandAmplit: 1
+  magnitude: 0.01
+  minRandAmplit: 0.4
+  maxRandAmplit: 0.6
 --- !u!60 &1117210450129109686
 PolygonCollider2D:
   m_ObjectHideFlags: 0

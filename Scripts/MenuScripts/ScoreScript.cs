@@ -4,29 +4,45 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public static int scoreValue = 0; //значение рекорда
-    private float time = 1f; //скорость обновления рекорда
+    public Text score;
+    public Text highScore;
 
-    Text score; 
+    public static int scoreValue = 0; //значение текущего рекорда
+    public static int highScoreValue = 0; //значение наивысшего рекорда
+
+    private float pointsPerSecond = 1; //скорость обновления рекорда 
+    public static bool scoreIncreasing = true;
     
+
     void Start()
     {
-        score = GetComponent<Text>();
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highScoreValue = PlayerPrefs.GetInt("HighScore");
+        }
         StartCoroutine(Score());
     }
     
     void Update()
     {
-        score.text = "" + scoreValue;
-    }
+        if (scoreValue > highScoreValue)
+        {
+            highScoreValue = scoreValue;
+            PlayerPrefs.SetInt("HighScore", highScoreValue);
+        }
 
+        score.text = "" + scoreValue;
+        highScore.text = "" + highScoreValue;
+    }
+    
     IEnumerator Score()
     {
         yield return new WaitForSeconds(2f);
-        while (true)
+        while (scoreIncreasing)
         {
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(pointsPerSecond);
             scoreValue += 1;
         }
     }
+    
 }

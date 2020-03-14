@@ -3,10 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class FishDeath : MonoBehaviour
 {
-    public GameObject pauseMenuUI, scoreUI, scoreValueUI, pauseButtonUI, reloadButtonUI;
+    public GameObject pauseMenuUI, scoreUI, scoreValueUI, pauseButtonUI, reloadButtonUI, highScoreUI, highScoreValueUI;    
 
-    Vector3 pos1, pos2;
     public static bool IsDeath = false;
+  
+    public GameObject spawnEnemy, ScoreManager;
+    private SpawnEnemy SE;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        SE = spawnEnemy.GetComponent<SpawnEnemy>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,15 +24,34 @@ public class FishDeath : MonoBehaviour
             pauseMenuUI.SetActive(true);
             scoreUI.SetActive(false);
             scoreValueUI.SetActive(false);
+            highScoreUI.SetActive(false);
+            highScoreValueUI.SetActive(false);
             pauseButtonUI.SetActive(false);
             reloadButtonUI.SetActive(false);
-            pos1 = transform.position;
-            pos2 = new Vector3(-7.281992f, 4f, 0f);
-            transform.localScale = new Vector2(0.8527528f, -0.9311681f);
-            transform.position = Vector3.MoveTowards(pos1, pos2, Time.deltaTime * 2);
+
+            SE.IsSpawner(false);
+            ScoreScript.scoreIncreasing = false;
+            GetComponent<PolygonCollider2D>().enabled = false;
+
+
+
             //Time.timeScale = 0f;
             IsDeath = true;
-            
+
+            transform.localScale = new Vector2(0.8527528f, -0.9311681f);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (IsDeath)
+        {
+            rb.velocity = new Vector2(0, 2);
+            if (gameObject.transform.position.y > 10)
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 }

@@ -5,6 +5,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    private ScoreScript scoreManager;
+
+    private void Start()
+    {
+        scoreManager = FindObjectOfType<ScoreScript>();
+    }
 
     void Update()
     {
@@ -41,8 +47,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
 
         ScoreScript.scoreValue = 0;
-
         FishDeath.IsDeath = false;
+        ScoreScript.scoreIncreasing = true;
     }
     /*
     public void LoadMenu()
