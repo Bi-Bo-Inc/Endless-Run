@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class FishDeath : MonoBehaviour
 {
-    public GameObject pauseMenuUI, scoreUI, scoreValueUI, pauseButtonUI, reloadButtonUI, highScoreUI, highScoreValueUI;    
-
-    public static bool IsDeath = false;
-  
+    public GameObject pauseMenuUI, scoreUI, scoreValueUI, pauseButtonUI, reloadButtonUI, highScoreUI, highScoreValueUI; 
+      
     public GameObject spawnEnemy, ScoreManager;
     private SpawnEnemy SE;
     private Rigidbody2D rb;
-    
+
+    public static bool IsDeath = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         SE = spawnEnemy.GetComponent<SpawnEnemy>();
         //FishPlayer = GetComponent<Animation>();
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,14 +34,13 @@ public class FishDeath : MonoBehaviour
             GetComponent<PolygonCollider2D>().enabled = false;
 
             IsDeath = true;
-
-            
         }
     }
 
     private float fishRotation = 0; //начальное положение
     private float fishAcceleration = 2f; //поворот
     private float maxFishRotation = 180f;
+
     private void FixedUpdate()
     {
         if (IsDeath)
