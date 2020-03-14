@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SinMoveEnemy : MonoBehaviour
 {
@@ -15,7 +13,6 @@ public class SinMoveEnemy : MonoBehaviour
 
 	Vector3 pos;
 
-
 	void Start()
 	{
 		pos = transform.position;
@@ -26,11 +23,9 @@ public class SinMoveEnemy : MonoBehaviour
 		MoveLeft();
 	}
 
-
 	void MoveLeft()
 	{
 		pos -= transform.right * Time.deltaTime * moveSpeed;
 		transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
 	}
-
 }

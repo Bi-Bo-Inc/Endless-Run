@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject EnemyFishType1, EnemyFishType2;
+    public GameObject EnemyFishType1, EnemyFishType2, EnemyFishType3;
     public float minTimeSpawnEnemy, maxTimeSpawnEnemy;
     private float time;
     private float y = 0; //переменная для выбора линии куда кинуть enemy
+
     void Start()
     {
         StartCoroutine(SpawnerEnemy());
@@ -14,8 +15,6 @@ public class SpawnEnemy : MonoBehaviour
 
     private float SetRandomLine()
     {
-
-
         int randLine = Random.Range(0, 3); //какая-то херня с switch ,тут указан диапазон из 4 чисел потому,что он игнорирует последнее
                                            //для трех кейсов нужно 4 значения ,ибо свитч берет диапазон [0;3)
         int randForCase2 = -1;
@@ -62,8 +61,9 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
-            int randFishEnemyChoose = Random.Range(1,3);
+            int randFishEnemyChoose = Random.Range(1,4);
             GameObject curFish;
+
             if (randFishEnemyChoose == 1)
             {
                 curFish = EnemyFishType1;
@@ -76,7 +76,16 @@ public class SpawnEnemy : MonoBehaviour
             else if(randFishEnemyChoose == 2)
             {
                 curFish = EnemyFishType2;
-                //спавн для первого вида рыбы
+                //спавн для второго вида рыбы
+                time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
+                yield return new WaitForSeconds(time);
+                y = SetRandomLine();
+                Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+            }
+            else if (randFishEnemyChoose == 3)
+            {
+                curFish = EnemyFishType3;
+                //спавн для второго вида рыбы
                 time = Random.Range(minTimeSpawnEnemy / 5, maxTimeSpawnEnemy / 5);
                 yield return new WaitForSeconds(time);
                 y = SetRandomLine();

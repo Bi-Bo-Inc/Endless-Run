@@ -18,5 +18,4 @@ public class MoveEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }   
