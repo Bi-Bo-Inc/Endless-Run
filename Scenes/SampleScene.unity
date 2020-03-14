@@ -1765,7 +1765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62, y: -126.33002}
+  m_AnchoredPosition: {x: -78.44998, y: -126.33002}
   m_SizeDelta: {x: 51.8, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445388999
@@ -1863,72 +1863,6 @@ MonoBehaviour:
     type: 3}
   EnemyFishType3: {fileID: 7900644427105845877, guid: 8ab69687c6531804c8e8f85906f07638,
     type: 3}
---- !u!1 &1827871434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1827871437}
-  - component: {fileID: 1827871436}
-  - component: {fileID: 1827871435}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1827871435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827871434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1827871436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827871434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1827871437
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827871434}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937083365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095887904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.07, y: 0.07, z: 0}
+  m_LocalPosition: {x: -10.04, y: 0.05, z: 0}
   m_LocalScale: {x: 0.8527528, y: 0.93116814, z: 3.3149567}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2421,8 +2355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b75b6a30442bcd4ba7f0d7bb4c9a62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishAcceleration: 1
-  maxFishRotation: 25
 --- !u!114 &2095887910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2375,7 @@ MonoBehaviour:
   highScoreUI: {fileID: 1110503818}
   highScoreValueUI: {fileID: 1445388997}
   spawnEnemy: {fileID: 1669600332}
-  ScoreManager: {fileID: 0}
+  ScoreManager: {fileID: 979519506}
 --- !u!95 &2095887911
 Animator:
   serializedVersion: 3
