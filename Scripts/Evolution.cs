@@ -4,7 +4,11 @@ using UnityEngine;
 public class Evolution : MonoBehaviour
 {
     public GameObject scoreValue;
-    int scoreForEvol;
+    int scoreForEvol = 0;
+    int codeForEvolve = -1;
+    public int scoreGoal1;
+    public int scoreGoal2;
+    //public int scoreGoal3;
     private void Start()
     {
         scoreForEvol = ScoreScript.scoreValue;
@@ -12,14 +16,13 @@ public class Evolution : MonoBehaviour
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
-        if (scoreForEvol <= 120)
+        if (scoreForEvol == scoreGoal1)
             Evolve(2);
-        else if (scoreForEvol > 125 && scoreForEvol <= 250)
+        else if (scoreForEvol == scoreGoal2)
             Evolve(3);
-
-
     }
-    private void Evolve(int codeForEvolve)
+
+    private void Evolve(int codeForeEvolve)
     {
         SceneManager.LoadScene(codeForEvolve);
     }
