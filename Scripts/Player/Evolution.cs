@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class Evolution : MonoBehaviour
 {
+    private FishDeath death;
+    public GameObject PlayerFish2, PlayerFish;
     public GameObject scoreValue;
-    int scoreForEvol = 0;    
-    public int scoreGoal1;
-    public int scoreGoal2;
+    int scoreForEvol = 0;
+    int codeForEvolve = -1;
+    public int scoreGoal;
+    
+    
     //public int scoreGoal3;
     private void Start()
     {
@@ -15,13 +19,15 @@ public class Evolution : MonoBehaviour
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
-        if (scoreForEvol == scoreGoal1)
-            Evolve(2);
-        else if (scoreForEvol == scoreGoal2)
-            Evolve(3);
-    }
+        if (scoreForEvol == scoreGoal) 
+        {
+           
+            PlayerFish2.SetActive(true);
+            PlayerFish.SetActive(false);
+        }
 
-    private void Evolve(int codeForEvolve)
+    }
+    private void Evolve(int codeForeEvolve)
     {
         SceneManager.LoadScene(codeForEvolve);
     }
