@@ -25,7 +25,6 @@ public class SinMoveEnemy : MonoBehaviour
 	void FixedUpdate()
 	{
 		MoveLeft();
-		
 	}
 
 	void MoveLeft()

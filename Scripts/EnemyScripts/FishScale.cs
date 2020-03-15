@@ -18,7 +18,7 @@ public class FishScale : MonoBehaviour
         y = x;        
         EnemyFishType1.transform.localScale = new Vector2(x, -y);
 
-        x = Random.Range(0.35f, 0.45f);
+        x = Random.Range(1f, 1.1f);
         y = x;
         EnemyFishType2.transform.localScale = new Vector2(x, y);
 

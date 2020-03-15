@@ -17,8 +17,6 @@ public class SpawnEnemy : MonoBehaviour
     {
         isSpawnerOn = a;
     }
-        
-
 
     void Start()
     {

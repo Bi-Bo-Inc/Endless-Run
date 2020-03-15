@@ -44,5 +44,4 @@ public class ScoreScript : MonoBehaviour
             scoreValue += 1;
         }
     }
-    
 }
