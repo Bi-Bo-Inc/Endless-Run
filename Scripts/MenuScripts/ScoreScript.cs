@@ -35,6 +35,11 @@ public class ScoreScript : MonoBehaviour
         highScore.text = "" + highScoreValue;
     }
     
+    public int SetScoreForOther(int scoreVal)
+    {
+        return scoreVal;
+    }
+
     IEnumerator Score()
     {
         yield return new WaitForSeconds(2f);
@@ -42,6 +47,7 @@ public class ScoreScript : MonoBehaviour
         {
             yield return new WaitForSeconds(pointsPerSecond);
             scoreValue += 1;
+            SetScoreForOther(scoreValue);
         }
     }
 }
