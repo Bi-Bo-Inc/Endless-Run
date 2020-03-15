@@ -68,11 +68,11 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void TimeDecrease() //уменьшение времени после каждой заспавненной рыбы
     {
-        if (time > 0.3f)
+        if (time > 0.5f)
             time -= 0.015f; //увеличение скорости спавна рыб,можно менять,но смотрите на ограничение IF,который выше 
         else
         {
-            time = 0.3f;
+            time = 0.5f;
         }
     }
    

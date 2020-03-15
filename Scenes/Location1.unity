@@ -2493,6 +2493,7 @@ GameObject:
   - component: {fileID: 2095887906}
   - component: {fileID: 2095887909}
   - component: {fileID: 2095887910}
+  - component: {fileID: 2095887912}
   - component: {fileID: 2095887911}
   m_Layer: 0
   m_Name: PlayerFish
@@ -2704,6 +2705,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2095887912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095887904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864adc90dd3faaa48ac8d9cac902f2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: {fileID: 544106845}
+  scoreGoal1: 150
+  scoreGoal2: 160
 --- !u!1 &2114315836
 GameObject:
   m_ObjectHideFlags: 0
