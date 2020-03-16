@@ -1,24 +1,21 @@
 ﻿using UnityEngine;
 
-public class MoveEntity : MonoBehaviour
+public class MoveBubble : MonoBehaviour
 {
     public float Entityspeed;
     public Vector2 moveEntity;
 
     void FixedUpdate()
     {
-        VodoroslMoving();
-       
+        BubbleMoving();
     }
 
-    void VodoroslMoving()
+    void BubbleMoving()
     {
         transform.Translate(Entityspeed * moveEntity);
-        if (gameObject.transform.position.x < -15)
+        if (gameObject.transform.position.y > 6)
         {
             Destroy(gameObject);
         }
     }
-
-   
 }
