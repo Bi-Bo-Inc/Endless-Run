@@ -29,7 +29,7 @@ public class FishDeath : MonoBehaviour
             pauseButtonUI.SetActive(false);
             reloadButtonUI.SetActive(false);
 
-            //SE.IsSpawner(false);
+            SE.IsSpawner(false);
             ScoreScript.scoreIncreasing = false;
             GetComponent<PolygonCollider2D>().enabled = false;
 
