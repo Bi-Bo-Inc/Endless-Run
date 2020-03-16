@@ -2018,6 +2018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7673e948fdf659649b52a0b432a5a29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubble: {fileID: 6729452750381533362, guid: 914c3c1f73301e54e9e7467363eb6c2c, type: 3}
   vodorosl0: {fileID: 8125313796053647086, guid: 1a35f8cf6032b99468d2f036e0e8e7e2,
     type: 3}
   vodorosl1: {fileID: 3863332380257171485, guid: daccc1e2f244756459d2834f8d5af535,
