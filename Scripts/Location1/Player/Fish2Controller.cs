@@ -40,8 +40,7 @@ public class Fish2Controller : MonoBehaviour
         FishRotation(fishRotation);
 
         //  ниже изменение ускорения
-        //if (Input.GetKey(KeyCode.Space))
-        if ((Input.touchCount > 0 && ((Input.GetTouch(0).phase == TouchPhase.Moved) || (Input.GetTouch(0).phase == TouchPhase.Stationary) || (Input.GetTouch(0).phase == TouchPhase.Began))) || Input.GetKey(KeyCode.Space))
+        if ((Input.GetKey(KeyCode.Space)) || (Input.touchCount > 0 && ((Input.GetTouch(0).phase == TouchPhase.Moved) || (Input.GetTouch(0).phase == TouchPhase.Stationary) || (Input.GetTouch(0).phase == TouchPhase.Began))))
         {
             if (swimForce < maxSwimForce)
                 swimForce += acceleration;
