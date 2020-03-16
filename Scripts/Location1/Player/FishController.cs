@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
 
-public class Fish2Controller : MonoBehaviour
+public class FishController : MonoBehaviour
 {
-    public GameObject PlayerFish;
     private Rigidbody2D rb;
-   
 
     private float swimForce = 0; //начальная скорость
     private float acceleration = 0.3f; //ускорение
@@ -15,37 +13,41 @@ public class Fish2Controller : MonoBehaviour
     private float fishAcceleration = 1f; //поворот
     private float maxFishRotation = 25f; //максимальный поворот
 
-    //private float secondsToStart = 1.5f;    //время до старта
-    //private float startSpeed = 1.9f;    //скорость выплывания рыбы
+    private float secondsToStart = 1.5f;    //время до старта
+    private float startSpeed = 1.9f;    //скорость выплывания рыбы
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        transform.position = PlayerFish.transform.position;
-        
+        rb = GetComponent<Rigidbody2D>(); 
     }
 
     private void FixedUpdate()
     {
-
-
-        if (!FishDeath.IsDeath)
-            Game();
-        
+        if(secondsToStart > 0)
+        {
+            secondsToStart -= Time.deltaTime;
+            rb.velocity = new Vector2(startSpeed, 0);
+        }
+        else
+        { 
+            if (!FishDeath.IsDeath)
+                Game();
+        }
     }
-
+    
     private void Game()
     {
         Movement(swimForce);
         FishRotation(fishRotation);
 
         //  ниже изменение ускорения
-        if (Input.GetKey(KeyCode.Space))
+        
+        if ((Input.touchCount > 0 && ((Input.GetTouch(0).phase == TouchPhase.Moved) || (Input.GetTouch(0).phase == TouchPhase.Stationary) || (Input.GetTouch(0).phase == TouchPhase.Began)))|| Input.GetKey(KeyCode.Space))
         {
             if (swimForce < maxSwimForce)
                 swimForce += acceleration;
 
-            if (fishRotation < maxFishRotation)
+            if (fishRotation < maxFishRotation)            
                 fishRotation += fishAcceleration;
         }
         else
@@ -53,18 +55,18 @@ public class Fish2Controller : MonoBehaviour
             if (swimForce > -maxSwimForce)
                 swimForce -= acceleration;
 
-            if (fishRotation > -maxFishRotation)
+            if (fishRotation > -maxFishRotation)            
                 fishRotation -= fishAcceleration;
         }
     }
-
-    private void FishRotation(float fishRotation)
+    
+    private void FishRotation (float fishRotation)
     {
         transform.rotation = Quaternion.Euler(0, 0, fishRotation);
     }
-
+   
     private void Movement(float swimForce)
-    {
+    {        
         rb.velocity = new Vector2(0, swimForce);
     }
 }
