@@ -5,16 +5,13 @@ public class FishDeath : MonoBehaviour
     public GameObject deathMenuUI, scoreUI, scoreValueUI, pauseButtonUI, reloadButtonUI, highScoreUI, highScoreValueUI; 
       
     public GameObject spawnEnemy, ScoreManager;
-    private SpawnEnemy SE;
     private Rigidbody2D rb;
 
     public static bool IsDeath = false;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        SE = spawnEnemy.GetComponent<SpawnEnemy>();
-        //FishPlayer = GetComponent<Animation>();
+        rb = GetComponent<Rigidbody2D>();       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +26,7 @@ public class FishDeath : MonoBehaviour
             pauseButtonUI.SetActive(false);
             reloadButtonUI.SetActive(false);
 
-            //SE.IsSpawner(false);
+            SpawnEnemy.isSpawnerOn = false;
             ScoreScript.scoreIncreasing = false;
             GetComponent<PolygonCollider2D>().enabled = false;
 

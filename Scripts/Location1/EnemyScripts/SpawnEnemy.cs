@@ -10,16 +10,11 @@ public class SpawnEnemy : MonoBehaviour
     private float time; //asd
 
     private float y = 0; //переменная для выбора линии куда кинуть enemy
- 
-    private bool isSpawnerOn = true;
 
-    public void IsSpawner(bool a)
-    {
-        isSpawnerOn = a;
-    }
+    public static bool isSpawnerOn = true;
 
     void Start()
-    {
+    {        
         StartCoroutine(SpawnerEnemy());
     }
     
@@ -81,6 +76,7 @@ public class SpawnEnemy : MonoBehaviour
         y = SetRandomLine();
         Instantiate(curFish, new Vector2(20f, y), Quaternion.identity);
     }
+
     IEnumerator SpawnerEnemy()
     {
         while (isSpawnerOn)
