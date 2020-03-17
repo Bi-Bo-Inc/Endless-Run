@@ -23,16 +23,18 @@ public class FishController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(secondsToStart > 0)
+        if (secondsToStart > 0)
         {
-            secondsToStart -= Time.deltaTime;
-            rb.velocity = new Vector2(startSpeed, 0);
+           secondsToStart -= Time.deltaTime;
+           rb.velocity = new Vector2(startSpeed, 0);
         }
         else
         { 
             if (!FishDeath.IsDeath)
-                Game();
+               Game();
         }
+
+      
     }
     
     private void Game()
@@ -67,5 +69,11 @@ public class FishController : MonoBehaviour
     private void Movement(float swimForce)
     {        
         rb.velocity = new Vector2(0, swimForce);
+    }
+
+    public float getSwimForce()
+    {
+        float a = swimForce;
+        return a;
     }
 }

@@ -2977,7 +2977,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095887904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.04, y: 0.05, z: 0}
+  m_LocalPosition: {x: -7.01, y: -0.15, z: 0}
   m_LocalScale: {x: 0.8527528, y: 0.93116814, z: 3.3149567}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3050,7 +3050,7 @@ MonoBehaviour:
   PlayerFish2: {fileID: 1643301597}
   PlayerFish: {fileID: 2095887904}
   scoreValue: {fileID: 544106845}
-  scoreGoal: 50
+  scoreGoal: 5
 --- !u!1 &2114315836
 GameObject:
   m_ObjectHideFlags: 0
