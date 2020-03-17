@@ -5,7 +5,6 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     public GameObject farBackground1, farBackground2, middleBackground1, middleBackground2, closeBackground1, closeBackground2;
-    public float timeFar,x;
 
     private void Start()
     {
