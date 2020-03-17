@@ -79,7 +79,7 @@ public class SpawnEnemy : MonoBehaviour
     private void ChooseRandFish() //выбор полупокера для спавна
     {
         y = SetRandomLine();
-        Instantiate(curFish, new Vector2(30f, y), Quaternion.identity);
+        Instantiate(curFish, new Vector2(20f, y), Quaternion.identity);
     }
     IEnumerator SpawnerEnemy()
     {
