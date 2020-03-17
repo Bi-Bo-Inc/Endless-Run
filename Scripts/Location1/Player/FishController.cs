@@ -68,4 +68,11 @@ public class FishController : MonoBehaviour
     {        
         rb.velocity = new Vector2(0, swimForce);
     }
+
+    public float GetSwimForce()
+    {
+        float a = swimForce;
+        return a;
+    }
+
 }

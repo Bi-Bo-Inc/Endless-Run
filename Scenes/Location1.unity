@@ -882,6 +882,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366507129}
   m_CullTransparentMesh: 0
+--- !u!1 &366887924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366887926}
+  - component: {fileID: 366887925}
+  m_Layer: 0
+  m_Name: Evolution
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &366887925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366887924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864adc90dd3faaa48ac8d9cac902f2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerFish2: {fileID: 1643301597}
+  PlayerFish: {fileID: 2095887904}
+  scoreValue: {fileID: 544106845}
+  scoreGoal: 5
+--- !u!4 &366887926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366887924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21392006, y: 0.3299652, z: -1.3440481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &463382139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6902197619114934823, guid: ec674fb42c2cf7147b4261227974996d,
@@ -2287,8 +2334,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643301597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.73, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.8515318, y: 0.80809075, z: 4.067}
+  m_LocalPosition: {x: -7.008, y: 0.155, z: 0}
+  m_LocalScale: {x: 0.6727101, y: 0.623038, z: 4.067}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2820,7 +2867,6 @@ GameObject:
   - component: {fileID: 2095887905}
   - component: {fileID: 2095887906}
   - component: {fileID: 2095887909}
-  - component: {fileID: 2095887912}
   - component: {fileID: 2095887911}
   - component: {fileID: 2095887910}
   m_Layer: 0
@@ -3033,22 +3079,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2095887912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095887904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864adc90dd3faaa48ac8d9cac902f2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerFish2: {fileID: 1643301597}
-  PlayerFish: {fileID: 2095887904}
-  scoreValue: {fileID: 544106845}
-  scoreGoal: 50
 --- !u!1 &2114315836
 GameObject:
   m_ObjectHideFlags: 0

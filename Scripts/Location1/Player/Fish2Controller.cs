@@ -5,6 +5,7 @@ public class Fish2Controller : MonoBehaviour
 {
     public GameObject PlayerFish;
     private Rigidbody2D rb;
+    private FishController fc;
    
 
     private float swimForce = 0; //начальная скорость
@@ -22,7 +23,9 @@ public class Fish2Controller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         transform.position = PlayerFish.transform.position;
-        
+        fc = PlayerFish.GetComponent<FishController>();
+        swimForce = fc.GetSwimForce();
+
     }
 
     private void FixedUpdate()
