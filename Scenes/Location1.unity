@@ -914,7 +914,8 @@ MonoBehaviour:
   PlayerFish2: {fileID: 1643301597}
   PlayerFish: {fileID: 2095887904}
   scoreValue: {fileID: 544106845}
-  scoreGoal: 5
+  scoreGoal: 10
+  spawnEnemy: {fileID: 1669600332}
 --- !u!4 &366887926
 Transform:
   m_ObjectHideFlags: 0
