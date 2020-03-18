@@ -72,10 +72,10 @@ public class Parallax : MonoBehaviour // надо переделать спос�
     {
         while (true)
         {
-            yield return new WaitForSeconds(7.59f);
+            yield return new WaitForSeconds(7.61f);
             CloseBackground1();
 
-            yield return new WaitForSeconds(7.59f);
+            yield return new WaitForSeconds(7.61f);
             CloseBackground2();
         }
     }
