@@ -48,10 +48,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(42.652f);
+            yield return new WaitForSeconds(42.65f);
             FarBackground1(); 
 
-            yield return new WaitForSeconds(42.652f);
+            yield return new WaitForSeconds(42.65f);
             FarBackground2();
         }
     }
@@ -60,10 +60,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(19.175f);
+            yield return new WaitForSeconds(19.172f);
             MiddleBackground1();
 
-            yield return new WaitForSeconds(19.175f);
+            yield return new WaitForSeconds(19.172f);
             MiddleBackground2();
         }
     }
@@ -72,10 +72,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(7.63f);
+            yield return new WaitForSeconds(7.6f);
             CloseBackground1();
 
-            yield return new WaitForSeconds(7.63f);
+            yield return new WaitForSeconds(7.6f);
             CloseBackground2();
         }
     }
