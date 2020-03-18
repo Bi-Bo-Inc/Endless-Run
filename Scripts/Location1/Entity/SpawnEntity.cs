@@ -4,20 +4,17 @@ using UnityEngine;
 public class SpawnEntity : MonoBehaviour
 {
     public GameObject bubble,vodorosl0, vodorosl1;//, vodorosl2, vodorosl3, vodorosl4, vodorosl5, vodorosl6, vodorosl7, vodorosl8, vodorosl9;
-    public float minTime, maxTime;
-    private GameObject currentVodorosl;
-    private void Start()
+    public float minTime, maxTime;//мин и макс окно для спавна ентити
+    private GameObject currentVodorosl; //текущий выбор ентити для спавна
+    private void Start() //запуск карутин для водорослей и пузырьков
     {
         StartCoroutine(SpawnerEntityVodorosl());
         StartCoroutine(SpawnerEntityBubble());
     }
 
-    private void SpawnVodorosl(GameObject curVodorosl)
+    private void SpawnVodorosl(GameObject curVodorosl) //функция спавна водорослей,принимает в параметр рандомный объект
     {
-        GameObject vodorosl = curVodorosl;
-
-
-        float y = Random.Range(0, 3);
+        float y = Random.Range(0, 3); //выбор рандомной высоты для спавна ентити
         if (y == 0)
             y = -2.71f;
         else if (y == 1)
@@ -26,10 +23,10 @@ public class SpawnEntity : MonoBehaviour
             y = -3.452664f;
 
 
-        Instantiate(vodorosl, new Vector2(15f, y), Quaternion.identity);
+        Instantiate(curVodorosl, new Vector2(15f, y), Quaternion.identity);
     }
 
-    private void ChooseVodorosl(int randVodorosl)
+    private void ChooseVodorosl(int randVodorosl) //функция выбора рандомной водоросли,при новых водорослях- добавить case 
     {
         switch (randVodorosl)
         {
@@ -47,25 +44,25 @@ public class SpawnEntity : MonoBehaviour
 
     }
 
-    IEnumerator SpawnerEntityVodorosl()
+    IEnumerator SpawnerEntityVodorosl() 
     {
         while (true)
         {
-            int randVodorosl = Random.Range(0, 2);
-            float time = Random.Range(minTime, maxTime);
-            yield return new WaitForSeconds(time);
+            int randVodorosl = Random.Range(0, 2); //выбираем переменную для switch в 29 строке
+            float time = Random.Range(minTime, maxTime); //выбор рандомного времени для карутины в промежутке между min и max
+            yield return new WaitForSeconds(time); //запуск функции ChooseVodorosl через time времени
             ChooseVodorosl(randVodorosl);
 
         }
     }
 
-    private void SpawnBubble()
+    private void SpawnBubble() //генератор пузыриков на -5.8 по Y оси и рандомному X между -9 и 12
     {
         float x = Random.Range(-9f, 12f);
         Instantiate(bubble, new Vector2(x,-5.8f),Quaternion.identity);
     }
 
-    IEnumerator SpawnerEntityBubble()
+    IEnumerator SpawnerEntityBubble() //карутина для цикла спавна пузыриков
     {
         while (true)
         {

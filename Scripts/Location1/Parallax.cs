@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    public GameObject farBackground1, farBackground2, middleBackground1, middleBackground2, closeBackground1, closeBackground2;
+    public GameObject farBackground1, farBackground2, middleBackground1, middleBackground2, closeBackground1, closeBackground2; //сюда вешаются спрайты бэка
 
     private void Start()
     {
-        FarBackground2();
+        //спавн второй части фона при старте
+        FarBackground2(); 
         MiddleBackground2();
         CloseBackground2();
         
-        
+        //запуск цикла респавна фона для каждого слоя
         StartCoroutine(ParallaxFarBackground());
         StartCoroutine(ParallaxMiddleBackground());
         StartCoroutine(ParallaxCloseBackground());
     }
- 
+    //сами генераторы фона
     private void FarBackground1()
     {
         Instantiate(farBackground1, new Vector3(19.4960f, -0.022f, 24.92969f), Quaternion.identity);
@@ -42,7 +43,7 @@ public class Parallax : MonoBehaviour
     {
         Instantiate(closeBackground2, new Vector3(19.39f, -4.219f, 24.92969f), Quaternion.identity);
     }
-
+    //функция для карутины
     IEnumerator ParallaxFarBackground()
     {
         while (true)
