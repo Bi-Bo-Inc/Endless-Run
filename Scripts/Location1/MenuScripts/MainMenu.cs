@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
         ScoreScript.scoreIncreasing = true;
 
         SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()

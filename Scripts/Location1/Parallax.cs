@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public class Parallax : MonoBehaviour // надо переделать способ
 {
     public GameObject farBackground1, farBackground2, middleBackground1, middleBackground2, closeBackground1, closeBackground2; //сюда вешаются спрайты бэка
 
@@ -48,10 +48,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(42.65f);
+            yield return new WaitForSeconds(42.64f);
             FarBackground1(); 
 
-            yield return new WaitForSeconds(42.65f);
+            yield return new WaitForSeconds(42.64f);
             FarBackground2();
         }
     }
@@ -60,10 +60,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(19.172f);
+            yield return new WaitForSeconds(19.1635f);
             MiddleBackground1();
 
-            yield return new WaitForSeconds(19.172f);
+            yield return new WaitForSeconds(19.1635f);
             MiddleBackground2();
         }
     }
@@ -72,10 +72,10 @@ public class Parallax : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(7.6f);
+            yield return new WaitForSeconds(7.59f);
             CloseBackground1();
 
-            yield return new WaitForSeconds(7.6f);
+            yield return new WaitForSeconds(7.59f);
             CloseBackground2();
         }
     }
