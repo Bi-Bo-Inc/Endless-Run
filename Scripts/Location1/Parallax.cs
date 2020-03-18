@@ -28,11 +28,11 @@ public class Parallax : MonoBehaviour
     }
     private void MiddleBackground1()
     {
-        Instantiate(middleBackground1, new Vector3(19.4939f, -1.45f, 24.92969f), Quaternion.identity);
+        Instantiate(middleBackground1, new Vector3(19.49f, -1.45f, 24.92969f), Quaternion.identity);
     }
     private void MiddleBackground2()
     {
-        Instantiate(middleBackground2, new Vector3(19.4939f, -1.45f, 24.92969f), Quaternion.identity);
+        Instantiate(middleBackground2, new Vector3(19.49f, -1.45f, 24.92969f), Quaternion.identity);
     }
     private void CloseBackground1()
     {

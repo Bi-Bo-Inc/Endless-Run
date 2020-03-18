@@ -15,7 +15,18 @@ public class SpawnEntity : MonoBehaviour
     private void SpawnVodorosl(GameObject curVodorosl)
     {
         GameObject vodorosl = curVodorosl;
-        Instantiate(vodorosl, new Vector2(15f, -4f), Quaternion.identity);
+
+
+        float y = Random.Range(0, 3);
+        if (y == 0)
+            y = -2.71f;
+        else if (y == 1)
+            y = -2.67f;
+        else if (y == 2)
+            y = -3.452664f;
+
+
+        Instantiate(vodorosl, new Vector2(15f, y), Quaternion.identity);
     }
 
     private void ChooseVodorosl(int randVodorosl)

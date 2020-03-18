@@ -2061,8 +2061,8 @@ MonoBehaviour:
     type: 3}
   vodorosl1: {fileID: 3863332380257171485, guid: daccc1e2f244756459d2834f8d5af535,
     type: 3}
-  minTime: 1
-  maxTime: 3
+  minTime: 0.9
+  maxTime: 2
 --- !u!4 &1546590041
 Transform:
   m_ObjectHideFlags: 0
