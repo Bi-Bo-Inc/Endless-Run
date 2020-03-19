@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Evolution : MonoBehaviour
 {
-    
 
     public GameObject PlayerFish2, PlayerFish;
     public GameObject scoreValue;
@@ -16,10 +15,14 @@ public class Evolution : MonoBehaviour
 
     private void Start()
     {
-        
-
         scoreForEvol = ScoreScript.scoreValue;
     }
+
+    private void ScroreForEvolve()
+    {
+
+    }
+
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
