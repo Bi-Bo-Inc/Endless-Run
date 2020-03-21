@@ -18,6 +18,7 @@ public class AppPAUSE : MonoBehaviour
         if (!FishDeath.IsDeath)
         {
             Debug.LogFormat("hasFocus: {0}", hasFocus);
+            
             ShowPause.Pause();
         }
     }
