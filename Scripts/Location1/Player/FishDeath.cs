@@ -28,6 +28,7 @@ public class FishDeath : MonoBehaviour
 
             SpawnEnemy.isSpawnerOn = false;
             ScoreScript.scoreIncreasing = false;
+           
             GetComponent<PolygonCollider2D>().enabled = false;
 
             IsDeath = true;

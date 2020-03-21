@@ -22,7 +22,7 @@ public class FishScale : MonoBehaviour
         y = x;
         EnemyFishType2.transform.localScale = new Vector2(x, y);
 
-        x = Random.Range(0.3f, 0.4f);
+        x = Random.Range(0.7f, 0.8f);
         y = x;
         EnemyFishType3.transform.localScale = new Vector2(x, y);
     }

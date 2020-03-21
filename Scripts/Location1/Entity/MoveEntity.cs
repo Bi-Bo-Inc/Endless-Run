@@ -5,15 +5,14 @@ public class MoveEntity : MonoBehaviour
     public float Entityspeed;
     public Vector2 moveEntity;
 
-    void FixedUpdate()
+    void Update()
     {
         VodoroslMoving();
-       
     }
 
     void VodoroslMoving()
     {
-        transform.Translate(Entityspeed * moveEntity);
+        transform.Translate(Vector2.left * Entityspeed * Time.smoothDeltaTime);
         if (gameObject.transform.position.x < -15)
         {
             Destroy(gameObject);
