@@ -13,6 +13,14 @@ public class MainMenu : MonoBehaviour
         ScoreScript.scoreIncreasing = true;
 
         SceneManager.LoadScene(1);
+<<<<<<< Updated upstream:Scripts/MenuScripts/MainMenu.cs
+=======
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+>>>>>>> Stashed changes:Scripts/Location1/MenuScripts/MainMenu.cs
     }
 
     public void QuitGame()

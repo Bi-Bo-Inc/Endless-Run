@@ -235,10 +235,17 @@ RectTransform:
   m_Father: {fileID: 1483224315}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 462.8, y: -258.8}
   m_SizeDelta: {x: 85.13, y: 78.62}
+=======
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -109, y: 88}
+  m_SizeDelta: {x: 86.130005, y: 79.619995}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &654095218
 MonoBehaviour:
@@ -389,12 +396,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719850829}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6480.0005}
+  m_LocalScale: {x: 72, y: 72, z: 72}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 772526712}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772526711
 GameObject:
@@ -426,6 +433,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 719850832}
   - {fileID: 1483224315}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -530,7 +538,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 5, y: -104}
+=======
+  m_AnchoredPosition: {x: 1.192e-10, y: -89.4}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 218.2, y: 39.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859315993
@@ -575,7 +587,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 859315994}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1483224316}
+        m_MethodName: Options
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &859315994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,8 +751,16 @@ Transform:
   - {fileID: 1763189180}
   - {fileID: 654095217}
   m_Father: {fileID: 772526712}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0034179688, y: 4}
+  m_SizeDelta: {x: -0.099975586, y: -9.400024}
+  m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> Stashed changes
 --- !u!114 &1483224316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,7 +925,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 1, y: -6}
+=======
+  m_AnchoredPosition: {x: 1.8186e-11, y: 27.05}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 188.9, y: 54.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078162806
