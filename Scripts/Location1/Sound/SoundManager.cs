@@ -20,4 +20,10 @@ public class SoundManager : MonoBehaviour
             audioSource.PlayOneShot(clip);
         }
     }
+
+    public void ClickButton()
+    {
+        if (!audioSource.isPlaying)
+        audioSource.PlayOneShot(clip);
+    }
 }

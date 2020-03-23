@@ -555,7 +555,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fb3d040b0cfecf04498be4f97410a9e0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1119,6 +1119,7 @@ GameObject:
   - component: {fileID: 366887926}
   - component: {fileID: 366887925}
   - component: {fileID: 366887927}
+  - component: {fileID: 366887928}
   m_Layer: 0
   m_Name: Evolution
   m_TagString: Untagged
@@ -1140,10 +1141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerFish2: {fileID: 1643301597}
   PlayerFish: {fileID: 2095887904}
-  scoreValue: {fileID: 544106845}
-  scoreGoal: 10
-  spawnEnemy: {fileID: 1669600332}
-  clip: {fileID: 0}
+  scoreGoal: 4
+  evolveAnimator: {fileID: 366887928}
+  clip: {fileID: 8300000, guid: 91bca500686489a45bfc46900681e868, type: 3}
 --- !u!4 &366887926
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,7 +1169,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1254,6 +1254,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &366887928
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366887924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 276215081d0a21349b7a6ba5986ed23b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &386880283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,6 +2928,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec674fb42c2cf7147b4261227974996d, type: 3}
+--- !u!1 &1282743099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282743102}
+  - component: {fileID: 1282743101}
+  - component: {fileID: 1282743100}
+  m_Layer: 0
+  m_Name: AppPause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1282743100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282743099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1be1498fe6b6047b4ad397ec29b548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 2136758868}
+--- !u!114 &1282743101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282743099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47d9e0abbdaf8c4aa3f64683bd74938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 2136758868}
+--- !u!4 &1282743102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282743099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.010636937, y: -0.07039759, z: 221.4961}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286446580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,7 +3043,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5027,7 +5104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b75b6a30442bcd4ba7f0d7bb4c9a62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2095887911}
 --- !u!114 &2095887910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5153,7 +5229,6 @@ GameObject:
   - component: {fileID: 2136758871}
   - component: {fileID: 2136758870}
   - component: {fileID: 2136758872}
-  - component: {fileID: 2136758873}
   m_Layer: 5
   m_Name: Pause_Menu
   m_TagString: Untagged
@@ -5232,19 +5307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2136758868}
---- !u!114 &2136758873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136758868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1be1498fe6b6047b4ad397ec29b548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 2136758868}
 --- !u!1001 &6902197619059030879
 PrefabInstance:
   m_ObjectHideFlags: 0

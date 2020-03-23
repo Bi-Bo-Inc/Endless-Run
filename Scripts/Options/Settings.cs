@@ -1,7 +1,8 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MuteSound : MonoBehaviour
+public class Settings : MonoBehaviour
 {
     public Sprite enableSprite;
     public Sprite disableSprite;
@@ -16,7 +17,7 @@ public class MuteSound : MonoBehaviour
         image = GetComponent<Image>();
     }
 
-    private void SetAudio(bool enabled)
+    void SetAudio(bool enabled)
     {
         if (enabled)
         {
@@ -31,9 +32,22 @@ public class MuteSound : MonoBehaviour
         audioEnabled = enabled;
     }
 
-
     public void SwitchAudio()
     {
         AudioEnabled = !AudioEnabled;
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public Slider slider;
+    public Text valueCount;
+    private void Update()
+    {
+        valueCount.text = slider.value.ToString();
+        AudioListener.volume = slider.value; 
+    }
+
 }

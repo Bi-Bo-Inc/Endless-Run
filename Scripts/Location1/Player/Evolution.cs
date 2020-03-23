@@ -1,36 +1,35 @@
-﻿using UnityEngine.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 
 public class Evolution : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject PlayerFish2, PlayerFish;
 
-    public GameObject PlayerFish2, PlayerFish;
-    public GameObject scoreValue;
-    int scoreForEvol = 0;
-    
-    public int scoreGoal;
+    [SerializeField]
+    private int scoreGoal = 0;
+    [SerializeField]
+    private Animator evolveAnimator;
 
-    public GameObject spawnEnemy;    
-
+    int scoreForEvol;
     private void Start()
     {
+        evolveAnimator = GetComponent<Animator>();
         scoreForEvol = ScoreScript.scoreValue;
         audioSource = GetComponent<AudioSource>();
     }
 
-
-    private bool isEvolve = false;
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
-        
-        if (scoreForEvol == scoreGoal) 
+        if (scoreForEvol == scoreGoal && !FishDeath.IsDeath) 
         {
-            isEvolve = true;
+            evolveAnimator.Play("Evolution");
             PlayerFish.SetActive(false);
             PlayerFish2.SetActive(true);
-            SoundForEvolve(isEvolve);
+            if (!audioSource.isPlaying)
+                audioSource.PlayOneShot(clip);
         }
     }
 
@@ -38,10 +37,5 @@ public class Evolution : MonoBehaviour
     private AudioClip clip;
     AudioSource audioSource;
 
-    private void SoundForEvolve(bool isEvolve)
-    {
-        if (isEvolve)
-            audioSource.PlayOneShot(clip);
-    }
 }
     
