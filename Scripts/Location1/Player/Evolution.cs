@@ -16,24 +16,32 @@ public class Evolution : MonoBehaviour
     private void Start()
     {
         scoreForEvol = ScoreScript.scoreValue;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    private void ScroreForEvolve()
-    {
 
-    }
-
+    private bool isEvolve = false;
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
         
         if (scoreForEvol == scoreGoal) 
         {
-            
-            PlayerFish2.SetActive(true);
+            isEvolve = true;
             PlayerFish.SetActive(false);
+            PlayerFish2.SetActive(true);
+            SoundForEvolve(isEvolve);
         }
     }
-   
+
+    [SerializeField]
+    private AudioClip clip;
+    AudioSource audioSource;
+
+    private void SoundForEvolve(bool isEvolve)
+    {
+        if (isEvolve)
+            audioSource.PlayOneShot(clip);
+    }
 }
     
