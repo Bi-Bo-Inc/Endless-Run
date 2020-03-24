@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnEnemy());
-        StartCoroutine(TimeDecrease());
+        
         
     }
     
@@ -25,11 +25,11 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemy[Random.Range(0, 3)], new Vector2(13, line[Random.Range(0, 6)]), Quaternion.identity);
     }
 
-    IEnumerator TimeDecrease()
+    private void TimeDecrease()
     {
         while(isSpawnerOn)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            
             if (time > 2f)
                 time -= 0.015f;
             else if (time == 0.2f)
