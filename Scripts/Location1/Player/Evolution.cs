@@ -9,33 +9,29 @@ public class Evolution : MonoBehaviour
 
     [SerializeField]
     private int scoreGoal = 0;
-    [SerializeField]
-    private Animator evolveAnimator;
-
     int scoreForEvol;
     private void Start()
     {
-        evolveAnimator = GetComponent<Animator>();
         scoreForEvol = ScoreScript.scoreValue;
         audioSource = GetComponent<AudioSource>();
     }
+
+    [SerializeField]
+    private AudioClip clip;
+    AudioSource audioSource;
 
     private void FixedUpdate()
     {
         scoreForEvol = ScoreScript.scoreValue;
         if (scoreForEvol == scoreGoal && !FishDeath.IsDeath) 
         {
-            evolveAnimator.Play("Evolution");
             PlayerFish.SetActive(false);
             PlayerFish2.SetActive(true);
-            if (!audioSource.isPlaying)
-                audioSource.PlayOneShot(clip);
+            if (!audioSource.isPlaying) audioSource.PlayOneShot(clip);
         }
     }
 
-    [SerializeField]
-    private AudioClip clip;
-    AudioSource audioSource;
+    
 
 }
     

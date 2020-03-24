@@ -5,7 +5,7 @@ using UnityEngine;
 public class SomeFitch : MonoBehaviour
 {
     public AudioClip[] audioClips;
-
+    public GameObject asd;
     public static SomeFitch instance;
 
     private AudioSource player;

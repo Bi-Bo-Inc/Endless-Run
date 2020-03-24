@@ -1141,8 +1141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerFish2: {fileID: 1643301597}
   PlayerFish: {fileID: 2095887904}
-  scoreGoal: 4
-  evolveAnimator: {fileID: 366887928}
+  scoreGoal: 2
   clip: {fileID: 8300000, guid: 91bca500686489a45bfc46900681e868, type: 3}
 --- !u!4 &366887926
 Transform:
@@ -2945,7 +2944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1282743100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3406,7 +3405,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1506739146}
   - component: {fileID: 1506739145}
-  - component: {fileID: 1506739147}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -3421,12 +3419,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506739144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f03e079d76ffcc479a01c6fe5479e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips: []
+  asd: {fileID: 0}
   test: 3
 --- !u!4 &1506739146
 Transform:
@@ -3442,18 +3441,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1506739147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506739144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf097b1651f27641ad16d2bcef5f09a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1523258042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,7 +3958,6 @@ GameObject:
   m_Component:
   - component: {fileID: 126758862}
   - component: {fileID: 1669600334}
-  - component: {fileID: 1669600333}
   m_Layer: 0
   m_Name: SpawnerEnemy
   m_TagString: Untagged
@@ -3979,25 +3965,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1669600333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669600332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd98fdbecab35104eb1e9de3f0ef9eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyFishType1: {fileID: 8657711459713240022, guid: 2dd21a0ca1cb0e14684ca8c8c6df2759,
-    type: 3}
-  EnemyFishType2: {fileID: 1475630491066347173, guid: 820ba306b9490514cb8a10e0a3d9ce68,
-    type: 3}
-  EnemyFishType3: {fileID: 7900644427105845877, guid: 8ab69687c6531804c8e8f85906f07638,
-    type: 3}
-  time: 2
 --- !u!114 &1669600334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,15 +3974,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669600332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d64bcf8f77cfc4cbf4c63433a49545, type: 3}
+  m_Script: {fileID: 11500000, guid: dcf097b1651f27641ad16d2bcef5f09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFishType1: {fileID: 8657711459713240022, guid: 2dd21a0ca1cb0e14684ca8c8c6df2759,
-    type: 3}
-  EnemyFishType2: {fileID: 1475630491066347173, guid: 820ba306b9490514cb8a10e0a3d9ce68,
-    type: 3}
-  EnemyFishType3: {fileID: 7900644427105845877, guid: 8ab69687c6531804c8e8f85906f07638,
-    type: 3}
+  enemy:
+  - {fileID: 2017230915109213705, guid: ba5b6da7c5e519142b3f40ad283903eb, type: 3}
+  - {fileID: 8603501721316669936, guid: 5c14de25439f5c048923e67de198e3f8, type: 3}
+  - {fileID: 513665656612555578, guid: efee2dc7b0e812a4f97e9c525c516daa, type: 3}
+  line:
+  - 3.93
+  - 2.36
+  - 0.82
+  - -0.82
+  - -2.4
+  - -3.866916
+  time: 2
 --- !u!1 &1693748512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,8 +5072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095887904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.11, y: 0.05, z: 0}
-  m_LocalScale: {x: 0.8527528, y: 0.93116814, z: 3.3149567}
+  m_LocalPosition: {x: -10.13, y: 0.03, z: 0}
+  m_LocalScale: {x: 0.7785633, y: 0.8343267, z: 3.3149567}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

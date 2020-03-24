@@ -18,11 +18,14 @@ public class FishController : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void FixedUpdate()
     {
+
         if (secondsToStart > 0)
         {
             secondsToStart -= Time.deltaTime;
