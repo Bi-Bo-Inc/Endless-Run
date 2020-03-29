@@ -5,11 +5,13 @@ using UnityEngine;
 public class SomeFitch : MonoBehaviour
 {
     public AudioClip[] audioClips;
-
+    public GameObject asd;
     public static SomeFitch instance;
 
     private AudioSource player;
-
+    [SerializeField]
+    [Range(3f, 10f)]
+    private float test;
     private void Awake()
     {
         player = GetComponent<AudioSource>();

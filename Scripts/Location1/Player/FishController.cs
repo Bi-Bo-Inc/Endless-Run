@@ -3,8 +3,6 @@
 
 public class FishController : MonoBehaviour
 {
-    public Animator anim;
-
     private Rigidbody2D rb;
 
     private float swimForce = 0; //начальная скорость
@@ -20,17 +18,13 @@ public class FishController : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
-
-        rb = GetComponent<Rigidbody2D>(); 
+        
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void FixedUpdate()
     {
-        if (ScoreScript.scoreValue == 9)
-        {
-            anim.Play("Evolution");            
-        }
 
         if (secondsToStart > 0)
         {

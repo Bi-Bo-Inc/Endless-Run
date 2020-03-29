@@ -2,8 +2,9 @@
 
 public class MoveEntity : MonoBehaviour
 {
-    public float Entityspeed;
-    public Vector2 moveEntity;
+    [SerializeField]
+    private float Entityspeed;
+    
 
     void Update()
     {

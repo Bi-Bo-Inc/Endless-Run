@@ -9,7 +9,6 @@ public class AppPAUSE : MonoBehaviour
     private void Start()
     {
         ShowPause = PauseMenu.GetComponent<PauseMenu>();
-        
     }
 
     
@@ -18,8 +17,8 @@ public class AppPAUSE : MonoBehaviour
         if (!FishDeath.IsDeath)
         {
             Debug.LogFormat("hasFocus: {0}", hasFocus);
-            
             ShowPause.Pause();
+            
         }
     }
 
@@ -27,7 +26,7 @@ public class AppPAUSE : MonoBehaviour
     {
         if (!FishDeath.IsDeath)
         {
-            Debug.LogFormat("pauseStatus: {0}", pauseStatus);
+           Debug.LogFormat("pauseStatus: {0}", pauseStatus);
         }
     }
 
