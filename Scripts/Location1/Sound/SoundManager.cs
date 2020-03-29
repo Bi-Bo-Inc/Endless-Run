@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip clip;
-    AudioSource audioSource;
+    [SerializeField]
+    private AudioClip clip;
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -17,7 +18,12 @@ public class SoundManager : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space)) || (Input.touchCount > 0 && (Input.GetTouch(0).phase == TouchPhase.Began)))
         {
             audioSource.PlayOneShot(clip);
-            Debug.Log("asd");
         }
+    }
+
+    public void ClickButton()
+    {
+        if (!audioSource.isPlaying)
+        audioSource.PlayOneShot(clip);
     }
 }

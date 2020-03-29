@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
-        SpawnEnemy.isSpawnerOn = true;
+        EnemySpawner.isSpawnerOn = true;
 
         ScoreScript.scoreValue = 0;
         FishDeath.IsDeath = false;

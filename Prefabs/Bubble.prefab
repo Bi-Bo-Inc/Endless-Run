@@ -94,5 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ca04b72ccce4847a97354f4eeddd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Entityspeed: 0.05
-  moveEntity: {x: -0.5, y: 1}
+  bubbleSpeedMin: 0.1
+  bubbleSpeedMax: 1
