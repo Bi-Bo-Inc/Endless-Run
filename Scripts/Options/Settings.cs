@@ -42,12 +42,16 @@ public class Settings : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public Slider slider;
-    public Text valueCount;
+    [SerializeField]
+    private Slider sliderSound,sliderMusic;
+    [SerializeField]
+    private Text valueCountSound,valueCountMusic;
     private void Update()
     {
-        valueCount.text = slider.value.ToString();
-        AudioListener.volume = slider.value; 
+        valueCountSound.text = sliderSound.value.ToString();
+       // AudioListener.volume = sliderSound.value;
+        valueCountMusic.text = sliderMusic.value.ToString();
+       // AudioListener.volume = sliderMusic.value; 
     }
 
 }
