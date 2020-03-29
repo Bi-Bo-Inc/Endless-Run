@@ -5,9 +5,8 @@ using UnityEngine;
 public class Scroll : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 0;
+    private float speed;
 
-    
     public Transform neighbour;
 
     void Update()
