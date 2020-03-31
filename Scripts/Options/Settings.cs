@@ -42,16 +42,6 @@ public class Settings : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    [SerializeField]
-    private Slider sliderSound,sliderMusic;
-    [SerializeField]
-    private Text valueCountSound,valueCountMusic;
-    private void Update()
-    {
-        valueCountSound.text = sliderSound.value.ToString();
-       // AudioListener.volume = sliderSound.value;
-        valueCountMusic.text = sliderMusic.value.ToString();
-       // AudioListener.volume = sliderMusic.value; 
-    }
+   
 
 }

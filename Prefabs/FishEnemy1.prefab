@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8603501721316669934}
   - component: {fileID: 8603501721316669935}
-  - component: {fileID: 152076792029544605}
   - component: {fileID: 6900932134712997719}
   - component: {fileID: 9070131128577264512}
   m_Layer: 0
-  m_Name: FishEnemy2
+  m_Name: FishEnemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &152076792029544605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8603501721316669936}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624b16f6dc6f93145bbacecfc290de76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.15
-  move: {x: -1, y: 0}
 --- !u!114 &6900932134712997719
 MonoBehaviour:
   m_ObjectHideFlags: 0
