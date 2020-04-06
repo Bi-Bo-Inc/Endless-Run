@@ -18,9 +18,9 @@ public class BubbleMenuSpawn : MonoBehaviour
 
     private void SpawnBubble()
     {
-        lineBubble = Random.Range(-9.2f, 20f);
-        Instantiate(bubbles[0], new Vector2(lineBubble, -6.3f), Quaternion.identity);
-        //Instantiate(bubbles[Random.Range(0, 3)], new Vector2(lineBubble, -6.3f), Quaternion.identity); раскоментить при кол-во пузырей больше 1 и закоментить строчку выше
+        lineBubble = Random.Range(-10f, 12f);
+        //Instantiate(bubbles[0], new Vector2(lineBubble, -6f), Quaternion.identity);
+        Instantiate(bubbles[Random.Range(0, bubbles.Length)], new Vector2(lineBubble, -6f), Quaternion.identity); //раскоментить при кол-во пузырей больше 1 и закоментить строчку выше
     }
 
     IEnumerator BubblesSpawner()

@@ -7,6 +7,7 @@ public class SlidersController : MonoBehaviour
     private Slider sliderSound, sliderMusic;
     [SerializeField]
     private Text valueCountSound, valueCountMusic;
+
     private void FixedUpdate()
     {
         valueCountSound.text = sliderSound.value.ToString();

@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class BubbleRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private int rotateCountMin, rotateCountMax;
+    private int rotateCount;
+    
+    Quaternion rotationZ;
+    
+    private void Start()
     {
-        
+        rotateCount = Random.Range(rotateCountMin, rotateCountMax);
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
+        Rotation();
+    }
+
+    private void Rotation()
+    {
+        rotationZ = Quaternion.AngleAxis(rotateCount, new Vector3(0, 0, 1));
+        transform.rotation *= rotationZ;
     }
 }
